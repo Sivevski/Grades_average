@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+
+    <link href="assets/fonts/Font_Awesome/all.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js//bootstrap.min.js"></script>
+    <script src="assets/js//owl.carousel.js"></script>
+    
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+<h2 class="text-center mb-5">Пресметка на просек</h2>
+<table id="myTable" >
+    <tr >
+        <th class="text-center">Предмет</th>
+        <th class="text-center">Оценка</th>
+    </tr>
+    <tr >
+        <td class="text-center">Математика</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+    <tr>
+        <td class="text-center">Билогија</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+    <tr>
+        <td class="text-center">Историја</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+    <tr>
+        <td class="text-center">Германски</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+    <tr>
+        <td class="text-center">Англиски</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+    <tr>
+        <td class="text-center">Географија</td>
+        <td class="text-center"><input ></input></td>
+    </tr>
+</table>
+    <p id="result"></p>
+    
+<button id='btn'onclick="myFunction()">Пресметај!</button>
+
+<p id="description"></p>
+    
+<script>      
+function myFunction() {
+ let Math=document.getElementById("myTable").rows[1].cells[1].children[0].value;
+ let Bio=document.getElementById("myTable").rows[2].cells[1].children[0].value;
+ let Hist=document.getElementById("myTable").rows[3].cells[1].children[0].value;
+ let Ger=document.getElementById("myTable").rows[4].cells[1].children[0].value;
+ let Ang=document.getElementById("myTable").rows[5].cells[1].children[0].value;
+ let Geo=document.getElementById("myTable").rows[6].cells[1].children[0].value;
+ 
+ let num1 = parseInt(Math);
+ let num2 = parseInt(Bio);
+ let num3 = parseInt(Hist);
+ let num4 = parseInt(Ger);
+ let num5 = parseInt(Ang);
+ let num6 = parseInt(Geo);
+
+ 
+let average=(num1+num2+num3+num4+num5+num6)/6
+ document.getElementById('result').innerHTML= `Твојот просек е:${average}`
+ if( num1>5 && num2>5 && num3>5 && num4>5 &&num5>5 &&num6>5 && num1<11 && num2<11 && num3<11 && num4<11&&num5<11 &&num6<11 &&average>8){
+    document.getElementById('description').innerHTML= `Најјак си`
+ }else if(  num1>5 && num2>5 && num3>5 && num4>5 &&num5>5 &&num6>5 && num1<11 && num2<11 && num3<11 && num4<11&&num5<11 &&num6<11 && average>6 && average<9){
+    document.getElementById('description').innerHTML= `Абе не си лош!`
+ }else if( num1>5 && num2>5 && num3>5 && num4>5 &&num5>5 &&num6>5 && num1<11 && num2<11 && num3<11 && num4<11&&num5<11 &&num6<11&&  average<10) {
+    document.getElementById('description').innerHTML= `Смрдиш.Ој фрли се од тераса.`
+ }else{
+    document.getElementById('description').innerHTML= `Дечки,имаш грешка.Мани Refresh и внесвај оценки од 6 до 10!`
+    document.getElementById('result').style.display= 'none';
+    document.getElementById('btn').disabled=true;
+ }
+}
+
+
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/*CAROUSEL SECTION*/
+
+.carousel-item{
+  height: 450px;
+}
+
+.carousel-caption {
+  top:27%;
+  left:50%;
+  bottom:auto;
+  
+  }
+
+/*CAROUSEL ENDS HERE*/
+
+/*CUSTOM STYLES*/
+.bg-custom{
+  background-color:  #F9FAFA;
+}
+#vegetables_banner{
+  background:url(../img/fruits_veggies.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 47vh;
+  margin-left: 220px;
+}
+
+#diet_banner{
+  background-image:url(../img/diet2.jpg);
+  height: 47vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+#advice_banner{
+  background-image:url(../img/advice.png);
+  height: 47vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+#recepies_banner{
+  background-image:url(../img/recepti.jpg);
+  height: 47vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+.color {
+ color:#2db300;
+}
+.color1 {
+  color:#ff8000;
+ }
+.btn-custom{
+  background-color:#2db300;
+  
+}
+.btn-custom1{
+  background-color:#ff8000;
+}
+.spacing3{
+  letter-spacing: 3px;
+}
+.background{
+  background: url(../img/farmer.jpg);
+background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+  
+}
+.bg-custom2{
+  background-color:#e6e6e6
+}
+.btn-custom3{
+  background-color:#ff3333;
+  width: 80%;
+}
+.fa-check{
+  color: red !important;
+}
+.included{
+  color: green !important;
+}
+.fa-times{
+  color: red !important;
+}
+
+
+
+@media (min-width: 1124px) {
+  #post001{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.entry {
+    color: #999999;
+    font-family: "Lato", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+}
+
+hr.style5 {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
+
+.btn-bordered{
+  border-style: dashed;
+}
+.small_text{
+  font-size: 0.9rem;
+}
+
+
+
+
+/*CUSTOM STYLE ENDS HERE*/
+
+
+#main-nav{
+  opacity: 0.8;;
+}
+.body-content {
+  margin-top: 85px;
+}
+.border{
+  border-bottom: 3 px solid red;
+}
+.float{
+  float: left;
+}
+/*CARD CAROUSEL EDNS HERE*/
+
+/*SECOND CAROUSEL*/
+
+/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+  #carousel2.carousel-inner .active.col-md-4.carousel-item + .carousel-item  + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    #carousel2.carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    #carousel2.carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    #carousel2.carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    #carousel2.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    #carousel2.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    #carousel2.carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    #carousel2.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    #carousel2.carousel-item-next.carousel-item-left + .carousel-item,
+    #carousel2.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    #carousel2.carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    #carousel2.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    #carousel2.carousel-item-prev.carousel-item-right + .carousel-item,
+    #carousel2.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    #carousel2.carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    #carousel2.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    #carousel2.carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    #carousel2.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    #carousel2.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    #carousel2.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    #carousel2.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    #carousel2.carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    #carousel2.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    #carousel2.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+/* ACCORDION */
+.myaccordion {
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+ 
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+  border: none;
+}
+ 
+.myaccordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent;
+}
+ 
+.myaccordion .fa-plus{
+  font-size: 12px;
+  color:green;
+}
+.myaccordion .fa-minus{
+  font-size: 12px;
+  color:green;
+}
+ 
+.myaccordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color:#000;
+  padding: 0;
+}
+.text-green {
+  
+  font-weight: bold;
+  color:#b30000;
+ 
+}
+ 
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+ 
+.myaccordion li + li {
+  margin-top: 10px;
+}
+
+/*ACCORDION END*/
+
+.new_title h5:after {
+  content: "";
+  border-style: solid;
+  border-width: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-color: #336600 #336600 transparent transparent;
+  }
+  .new_title2 h5:after {
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-color: #b30000 #b30000 transparent transparent;
+    }
+  .new_title  {
+    text-align:left; 
+    margin-left:-10px; 
+    margin-right:-10px; 
+    border-bottom:1px #e5e5e5 solid;
+ 
+ }
+ .new_title2  {
+  text-align:left; 
+  margin-left:-10px; 
+  margin-right:-10px; 
+  border-bottom:1px #e5e5e5 solid;
+
+}
+ 
+/*Blog*/
+
+
+
+.col-md-4{
+    padding-bottom:20px;
+}
+
+.white {
+  color: #fff !important;
+}
+.mt{float: left;margin-top: -20px;padding-top: 20px;}
+.bg-blue-ui {
+  background-color: #708198 !important;
+}
+figure img{width:300px;}
+
+
+
+
+
+/* The colour of the indicators */
+
+
+.item-box-blog {
+  border: 1px solid #dadada;
+  text-align: center;
+  z-index: 4;
+  padding: 20px;
+  margin-left:0;
+}
+
+.item-box-blog-image {
+  position: relative;
+}
+
+.item-box-blog-image figure img {
+  width: 100%;
+  height: auto;
+}
+
+.item-box-blog-date {
+  position: absolute;
+  z-index: 5;
+  padding: 4px 20px;
+  top: -20px;
+  right: 8px;
+  background-color: #41cb52;
+}
+
+.item-box-blog-date span {
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+  font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+  font-size: 16px;
+}
+
+.item-box-blog-body {
+  padding: 10px;
+}
+
+.item-heading-blog a h5 {
+  margin: 0;
+  line-height: 1;
+  text-decoration:none;
+  transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+.item-box-blog-data p {
+  font-size: 13px;
+}
+
+.item-box-blog-data p i {
+  font-size: 12px;
+}
+
+.item-box-blog-text {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+
+
+.btn.bg-blue-ui.white.read {
+  cursor: pointer;
+  padding: 4px 20px;
+  float: left;
+  margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+  box-shadow: 0px 5px 15px inset #4d5f77;
+}
